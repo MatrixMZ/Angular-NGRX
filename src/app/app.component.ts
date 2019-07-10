@@ -11,15 +11,14 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  pizzas: Pizza[];
+  pizzas$: Observable<Pizza[]>;
 
   constructor(private store: Store<fromStore.ProductsState>) {
 
   }
 
   ngOnInit() {
-    this.store.select<any>('products').subscribe(state => {
-      console.log(state);
-    });
+    this.pizzas$ = this.store.select<any>(fromStore.getAllPizzas);
+    this.store.dispatch(new fromStore.LoadPizzas());
   }
 }

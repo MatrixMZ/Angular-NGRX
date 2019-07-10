@@ -2,4 +2,14 @@
   Welcome to Reactive Pizza!
 </h1>
 
+
+
+<div *ngFor="let pizza of (pizzas$ | async)">
+  <h3>{{ pizza.name }}</h3>
+  <ul>
+    <li *ngFor="let topping of pizza.toppings">{{ topping.name }}</li>
+  </ul>
+
+</div>
+
 <router-outlet></router-outlet>

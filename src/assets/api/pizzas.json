@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Peperoni",
+    "toppings": [
+      { "id": 1, "name": "Cucamber" },
+      { "id": 2, "name": "Tomato" },
+      { "id": 3, "name": "Olive" },
+      { "id": 4, "name": "Peperoni" }
+    ]
+  }
+]
